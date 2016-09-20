@@ -1,0 +1,420 @@
+Last login: Tue Sep 20 16:02:47 on ttys001
+ GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 2.10.0
+Homebrew 0.9.9 (git revision 7a63; last commit 2016-09-20) Homebrew/homebrew-core (git revision 3c66; last commit 2016-09-20)
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin15]
+node v6.6.0
+psql (PostgreSQL) 9.5.4
+------------------------------------------
+type unwelcome to remove this message
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ tree
+.
+├── LICENSE.txt
+├── README.md
+├── kitchen
+│   ├── cans.txt
+│   ├── fridge
+│   │   ├── diapers.txt
+│   │   ├── freezer
+│   │   │   ├── couch.txt
+│   │   │   ├── frozenpeas.txt
+│   │   │   └── icecream.txt
+│   │   ├── milk.txt
+│   │   └── trashcan
+│   │       ├── banana-peels.txt
+│   │       ├── chicken-bones.txt
+│   │       ├── egg-shells.txt
+│   │       └── sink
+│   │           ├── clean-dishes.txt
+│   │           ├── delete-me.txt
+│   │           └── dirty-dishes.txt
+│   └── pantry
+│       ├── cans.txt
+│       ├── cereal.txt
+│       └── crisper-drawer
+│           └── lettuce.txt
+└── kitchen.zip
+
+7 directories, 18 files
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ cd kitchen/
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ rm cans.txt 
+removed 'cans.txt'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── diapers.txt
+│   ├── freezer
+│   │   ├── couch.txt
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   ├── milk.txt
+│   └── trashcan
+│       ├── banana-peels.txt
+│       ├── chicken-bones.txt
+│       ├── egg-shells.txt
+│       └── sink
+│           ├── clean-dishes.txt
+│           ├── delete-me.txt
+│           └── dirty-dishes.txt
+└── pantry
+    ├── cans.txt
+    ├── cereal.txt
+    └── crisper-drawer
+        └── lettuce.txt
+
+6 directories, 14 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ cd ..
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ tree
+.
+├── LICENSE.txt
+├── README.md
+├── kitchen
+│   ├── fridge
+│   │   ├── diapers.txt
+│   │   ├── freezer
+│   │   │   ├── couch.txt
+│   │   │   ├── frozenpeas.txt
+│   │   │   └── icecream.txt
+│   │   ├── milk.txt
+│   │   └── trashcan
+│   │       ├── banana-peels.txt
+│   │       ├── chicken-bones.txt
+│   │       ├── egg-shells.txt
+│   │       └── sink
+│   │           ├── clean-dishes.txt
+│   │           ├── delete-me.txt
+│   │           └── dirty-dishes.txt
+│   └── pantry
+│       ├── cans.txt
+│       ├── cereal.txt
+│       └── crisper-drawer
+│           └── lettuce.txt
+└── kitchen.zip
+
+7 directories, 17 files
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ rm kitchen/fridge/diapers.txt 
+removed 'kitchen/fridge/diapers.txt'
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ tree
+.
+├── LICENSE.txt
+├── README.md
+├── kitchen
+│   ├── fridge
+│   │   ├── freezer
+│   │   │   ├── couch.txt
+│   │   │   ├── frozenpeas.txt
+│   │   │   └── icecream.txt
+│   │   ├── milk.txt
+│   │   └── trashcan
+│   │       ├── banana-peels.txt
+│   │       ├── chicken-bones.txt
+│   │       ├── egg-shells.txt
+│   │       └── sink
+│   │           ├── clean-dishes.txt
+│   │           ├── delete-me.txt
+│   │           └── dirty-dishes.txt
+│   └── pantry
+│       ├── cans.txt
+│       ├── cereal.txt
+│       └── crisper-drawer
+│           └── lettuce.txt
+└── kitchen.zip
+
+7 directories, 16 files
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ rm kitchen/fridge/freezer/couch.txt 
+removed 'kitchen/fridge/freezer/couch.txt'
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ tree
+.
+├── LICENSE.txt
+├── README.md
+├── kitchen
+│   ├── fridge
+│   │   ├── freezer
+│   │   │   ├── frozenpeas.txt
+│   │   │   └── icecream.txt
+│   │   ├── milk.txt
+│   │   └── trashcan
+│   │       ├── banana-peels.txt
+│   │       ├── chicken-bones.txt
+│   │       ├── egg-shells.txt
+│   │       └── sink
+│   │           ├── clean-dishes.txt
+│   │           ├── delete-me.txt
+│   │           └── dirty-dishes.txt
+│   └── pantry
+│       ├── cans.txt
+│       ├── cereal.txt
+│       └── crisper-drawer
+│           └── lettuce.txt
+└── kitchen.zip
+
+7 directories, 15 files
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ mv kitchen/pantry/crisper-drawer/ kitchen/fridge/
+'kitchen/pantry/crisper-drawer/' -> 'kitchen/fridge/crisper-drawer'
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ tree
+.
+├── LICENSE.txt
+├── README.md
+├── kitchen
+│   ├── fridge
+│   │   ├── crisper-drawer
+│   │   │   └── lettuce.txt
+│   │   ├── freezer
+│   │   │   ├── frozenpeas.txt
+│   │   │   └── icecream.txt
+│   │   ├── milk.txt
+│   │   └── trashcan
+│   │       ├── banana-peels.txt
+│   │       ├── chicken-bones.txt
+│   │       ├── egg-shells.txt
+│   │       └── sink
+│   │           ├── clean-dishes.txt
+│   │           ├── delete-me.txt
+│   │           └── dirty-dishes.txt
+│   └── pantry
+│       ├── cans.txt
+│       └── cereal.txt
+└── kitchen.zip
+
+7 directories, 15 files
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ mv kitchen/fridge/trashcan/sink/
+gmv: missing destination file operand after 'kitchen/fridge/trashcan/sink/'
+Try 'gmv --help' for more information.
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ cd kitchen/fridge/crisper-drawer/
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../
+
+nothing added to commit but untracked files present (use "git add" to track)
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ touch apples.txt
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ tree
+.
+├── apples.txt
+└── lettuce.txt
+
+0 directories, 2 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ tree.
+-bash: tree.: command not found
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ .tree
+-bash: .tree: command not found
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ 
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ tree
+.
+├── apples.txt
+└── lettuce.txt
+
+0 directories, 2 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ cd code
+-bash: cd: code: No such file or directory
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ .
+-bash: .: filename argument required
+.: usage: . filename [arguments]
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ tree
+.
+├── apples.txt
+└── lettuce.txt
+
+0 directories, 2 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen/fridge/crisper-drawer on master[?]
+$ cd
+roberttorres ~
+$ pwd
+/Users/roberttorres
+roberttorres ~
+$ cd code/wdi/homework/cli_golf/
+roberttorres ~/code/wdi/homework/cli_golf on master[?]
+$ cd kitchen/
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   ├── milk.txt
+│   └── trashcan
+│       ├── banana-peels.txt
+│       ├── chicken-bones.txt
+│       ├── egg-shells.txt
+│       └── sink
+│           ├── clean-dishes.txt
+│           ├── delete-me.txt
+│           └── dirty-dishes.txt
+└── pantry
+    ├── cans.txt
+    └── cereal.txt
+
+6 directories, 13 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ mv fridge/trashcan/ ./
+'fridge/trashcan/' -> './trashcan'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tee
+tree
+tree
+^C
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    ├── egg-shells.txt
+    └── sink
+        ├── clean-dishes.txt
+        ├── delete-me.txt
+        └── dirty-dishes.txt
+
+6 directories, 13 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ mv trashcan/sink/ .
+'trashcan/sink/' -> './sink'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── clean-dishes.txt
+│   ├── delete-me.txt
+│   └── dirty-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+6 directories, 13 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ rm sink/delete-me.txt 
+removed 'sink/delete-me.txt'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── clean-dishes.txt
+│   └── dirty-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+6 directories, 12 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ mkdir sink/drying-rack/
+gmkdir: created directory 'sink/drying-rack/'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── clean-dishes.txt
+│   ├── dirty-dishes.txt
+│   └── drying-rack
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+7 directories, 12 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ mv sink/clean-dishes.txt sink/drying-rack/
+'sink/clean-dishes.txt' -> 'sink/drying-rack/clean-dishes.txt'
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ tree
+.
+├── fridge
+│   ├── crisper-drawer
+│   │   ├── apples.txt
+│   │   └── lettuce.txt
+│   ├── freezer
+│   │   ├── frozenpeas.txt
+│   │   └── icecream.txt
+│   └── milk.txt
+├── pantry
+│   ├── cans.txt
+│   └── cereal.txt
+├── sink
+│   ├── dirty-dishes.txt
+│   └── drying-rack
+│       └── clean-dishes.txt
+└── trashcan
+    ├── banana-peels.txt
+    ├── chicken-bones.txt
+    └── egg-shells.txt
+
+7 directories, 12 files
+roberttorres ~/code/wdi/homework/cli_golf/kitchen on master[?]
+$ 
